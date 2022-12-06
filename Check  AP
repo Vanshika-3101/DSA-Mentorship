@@ -1,0 +1,29 @@
+//User function Template for Java
+
+
+
+class Solution
+{
+    boolean checkIsAP(int arr[] ,int n)
+    {
+        Arrays.sort(arr);
+        int min=arr[1]-arr[0];
+        int flag=0;
+        for(int i=1;i<n-1;i++)
+        {
+            if((arr[i+1]-arr[i])!=min)
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0)
+        return true;
+        else
+        return false;
+        
+        // code here
+
+    
+    }
+}
